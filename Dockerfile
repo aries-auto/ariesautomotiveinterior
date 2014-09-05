@@ -26,6 +26,6 @@ RUN mkdir -p /home/deployer/gosrc/src/github.com/curt-labs/ariesautomotiveinteri
 ADD . /home/deployer/gosrc/src/github.com/curt-labs/ariesautomotiveinterior
 WORKDIR /home/deployer/gosrc/src/github.com/curt-labs/ariesautomotiveinterior
 RUN export GOPATH=/home/deployer/gosrc && go get
-RUN export GOPATH=/home/deployer/gosrc && go build -o ariesjeep ./index.go
+RUN export GOPATH=/home/deployer/gosrc && go build -o ariesautomotiveinterior ./index.go
 
 EXPOSE 443
