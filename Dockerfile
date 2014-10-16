@@ -22,9 +22,9 @@ RUN wget -qO- https://go.googlecode.com/files/go1.2.linux-amd64.tar.gz | tar -C 
 RUN mkdir -p /home/deployer/logs
 
 WORKDIR /home/deployer/gosrc
-RUN mkdir -p /home/deployer/gosrc/src/github.com/curt-labs/ariesautomotiveinterior
-ADD . /home/deployer/gosrc/src/github.com/curt-labs/ariesautomotiveinterior
-WORKDIR /home/deployer/gosrc/src/github.com/curt-labs/ariesautomotiveinterior
+RUN mkdir -p /home/deployer/gosrc/src/github.com/aries-auto/ariesautomotiveinterior
+ADD . /home/deployer/gosrc/src/github.com/aries-auto/ariesautomotiveinterior
+WORKDIR /home/deployer/gosrc/src/github.com/aries-auto/ariesautomotiveinterior
 RUN export GOPATH=/home/deployer/gosrc && go get
 RUN export GOPATH=/home/deployer/gosrc && go build -o ariesautomotiveinterior ./index.go
 
